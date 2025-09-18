@@ -1,0 +1,1 @@
+INSERT INTO extracted_config_pairs (server_id, file_path, config_key, config_value) VALUES (?,?,?,?);

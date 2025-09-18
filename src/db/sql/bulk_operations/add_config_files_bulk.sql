@@ -1,0 +1,1 @@
+INSERT INTO config_files (server_id, file_path, content) VALUES (?,?,?);

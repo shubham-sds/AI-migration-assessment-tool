@@ -1,0 +1,1 @@
+SELECT id, host_name FROM vsphere_hosts WHERE vcenter_ip =?;

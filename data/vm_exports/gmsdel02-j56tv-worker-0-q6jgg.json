@@ -1,0 +1,94 @@
+{
+    "vm_name": "gmsdel02-j56tv-worker-0-q6jgg",
+    "host_name": "dl-380-01-hpc.anthos.local",
+    "cluster_name": "Application-Cluster",
+    "guest_os": "Red Hat Enterprise Linux 8 (64-bit)",
+    "power_state": "poweredOn",
+    "ip_address": "10.128.2.2",
+    "cpu_count": 8,
+    "memory_gb": 20.0,
+    "vmware_tools_status": "toolsOk",
+    "boot_type": "efi",
+    "secure_boot_enabled": false,
+    "hardware_version": "vmx-15",
+    "snapshots": [],
+    "virtual_disks": [
+        {
+            "disk_label": "Hard disk 1",
+            "capacity_gb": 120.0,
+            "provisioning_type": "Thin",
+            "storage_policy": "N/A",
+            "datastore_name": "vsanDatastore-app"
+        },
+        {
+            "disk_label": "Hard disk 2",
+            "capacity_gb": 500.0,
+            "provisioning_type": "Thin",
+            "storage_policy": "N/A",
+            "datastore_name": "vsanDatastore-app"
+        },
+        {
+            "disk_label": "Hard disk 3",
+            "capacity_gb": 8.0,
+            "provisioning_type": "Thin",
+            "storage_policy": "N/A",
+            "datastore_name": "vsanDatastore-app"
+        },
+        {
+            "disk_label": "Hard disk 4",
+            "capacity_gb": 2.0,
+            "provisioning_type": "Thin",
+            "storage_policy": "N/A",
+            "datastore_name": "vsanDatastore-app"
+        },
+        {
+            "disk_label": "Hard disk 5",
+            "capacity_gb": 20.0,
+            "provisioning_type": "Thin",
+            "storage_policy": "N/A",
+            "datastore_name": "vsanDatastore-app"
+        },
+        {
+            "disk_label": "Hard disk 6",
+            "capacity_gb": 20.0,
+            "provisioning_type": "Thin",
+            "storage_policy": "N/A",
+            "datastore_name": "vsanDatastore-app"
+        },
+        {
+            "disk_label": "Hard disk 7",
+            "capacity_gb": 20.0,
+            "provisioning_type": "Thin",
+            "storage_policy": "N/A",
+            "datastore_name": "vsanDatastore-app"
+        },
+        {
+            "disk_label": "Hard disk 8",
+            "capacity_gb": 5.0,
+            "provisioning_type": "Thin",
+            "storage_policy": "N/A",
+            "datastore_name": "vsanDatastore-app"
+        }
+    ],
+    "networks": [
+        {
+            "nic_label": "Network adapter 1",
+            "mac_address": "00:50:56:9b:45:b9",
+            "ip_address": "10.128.2.2",
+            "port_group": "N/A",
+            "switch_name": "N/A",
+            "vlan_id": 0,
+            "teaming_policy": "N/A"
+        }
+    ],
+    "tags": [
+        {
+            "tag_name": "gmsdel02-j56tv",
+            "category_name": "openshift-gmsdel02-j56tv"
+        }
+    ],
+    "vapp_membership": null,
+    "storage_policy": "Datastore Default",
+    "vgpu_info": "[]",
+    "custom_attributes": "{}"
+}

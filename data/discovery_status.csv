@@ -1,0 +1,5 @@
+run_id,ip,os_type,user,status,last_update
+1,10.19.7.76,linux,ubuntu,completed,2025-09-02 14:58:01
+2,10.19.4.8,vsphere,read@vsphere.local,in_progress,2025-09-02 14:57:32
+3,10.19.7.76,linux,ubuntu,completed,2025-09-02 15:02:41
+4,10.19.4.8,vsphere,read@vsphere.local,completed,2025-09-02 15:07:02

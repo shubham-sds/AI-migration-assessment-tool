@@ -1,0 +1,40 @@
+{
+    "vm_name": "10.19.7.138-ajay-ubuntu",
+    "host_name": "dl-360-03.anthos.local",
+    "cluster_name": "Management-Cluster",
+    "guest_os": "Ubuntu Linux (64-bit)",
+    "power_state": "poweredOn",
+    "ip_address": "10.19.7.138",
+    "cpu_count": 4,
+    "memory_gb": 8.0,
+    "vmware_tools_status": "toolsOk",
+    "boot_type": "bios",
+    "secure_boot_enabled": false,
+    "hardware_version": "vmx-19",
+    "snapshots": [],
+    "virtual_disks": [
+        {
+            "disk_label": "Hard disk 1",
+            "capacity_gb": 200.0,
+            "provisioning_type": "Thin",
+            "storage_policy": "N/A",
+            "datastore_name": "vsanDatastore-mgmt"
+        }
+    ],
+    "networks": [
+        {
+            "nic_label": "Network adapter 1",
+            "mac_address": "00:50:56:9b:93:9d",
+            "ip_address": "10.19.7.138",
+            "port_group": "N/A",
+            "switch_name": "N/A",
+            "vlan_id": 0,
+            "teaming_policy": "N/A"
+        }
+    ],
+    "tags": [],
+    "vapp_membership": null,
+    "storage_policy": "Datastore Default",
+    "vgpu_info": "[]",
+    "custom_attributes": "{}"
+}

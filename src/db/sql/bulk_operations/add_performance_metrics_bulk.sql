@@ -1,0 +1,1 @@
+INSERT INTO performance_metrics (server_id, alias, instance_name, value, unit, description, threshold) VALUES (?,?,?,?,?,?,?);

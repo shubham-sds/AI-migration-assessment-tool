@@ -1,0 +1,45 @@
+{
+    "vm_name": "gmsdel02-j56tv-master-1",
+    "host_name": "dl-380-02-hpc.anthos.local",
+    "cluster_name": "Application-Cluster",
+    "guest_os": "Red Hat Enterprise Linux 8 (64-bit)",
+    "power_state": "poweredOn",
+    "ip_address": "10.129.0.2",
+    "cpu_count": 16,
+    "memory_gb": 32.0,
+    "vmware_tools_status": "toolsOk",
+    "boot_type": "efi",
+    "secure_boot_enabled": false,
+    "hardware_version": "vmx-15",
+    "snapshots": [],
+    "virtual_disks": [
+        {
+            "disk_label": "Hard disk 1",
+            "capacity_gb": 120.0,
+            "provisioning_type": "Thin",
+            "storage_policy": "N/A",
+            "datastore_name": "vsanDatastore-app"
+        }
+    ],
+    "networks": [
+        {
+            "nic_label": "Network adapter 1",
+            "mac_address": "00:50:56:9b:fe:ee",
+            "ip_address": "10.129.0.2",
+            "port_group": "N/A",
+            "switch_name": "N/A",
+            "vlan_id": 0,
+            "teaming_policy": "N/A"
+        }
+    ],
+    "tags": [
+        {
+            "tag_name": "gmsdel02-j56tv",
+            "category_name": "openshift-gmsdel02-j56tv"
+        }
+    ],
+    "vapp_membership": null,
+    "storage_policy": "Datastore Default",
+    "vgpu_info": "[]",
+    "custom_attributes": "{}"
+}

@@ -1,0 +1,166 @@
+# Knowledge Base for the AI-Powered Migration Assessment Tool
+# Version: 2.1
+
+# New setting: Default connection timeout in seconds for discovery agents.
+connection_timeout: 60
+
+tasks_per_os:
+  vsphere:
+    - clusters
+    - hosts
+    - datastores
+    - vms
+    - tags_and_associations
+    - performance_metrics
+
+# --- Configuration File Discovery Targets ---
+config_files:
+  - name: "httpd.conf"
+    paths: ["/etc/httpd", "/etc/apache2"]
+    parsers:
+      - key: "ListenPort"
+        regex: "^Listen\\s+(\\d+)"
+      - key: "ServerAdmin"
+        regex: "^ServerAdmin\\s+(.+)"
+  
+  - name: "nginx.conf"
+    paths: ["/etc/nginx"]
+    parsers:
+      - key: "WorkerProcesses"
+        regex: "worker_processes\\s+(\\d+);"
+
+  - name: "my.cnf"
+    paths: ["/etc/mysql", "/etc"]
+    parsers:
+      - key: "Port"
+        regex: "^port\\s*=\\s*(\\d+)"
+        section: "mysqld"
+
+  - name: "web.config"
+    paths: ["C:\\inetpub\\wwwroot"]
+
+# --- Performance Counters Configuration (Updated with Suggestions) ---
+linux:
+    - alias: "CPU User %"
+      command: "vmstat 1 2 | tail -1 | awk '{print $13}'"
+      unit: "%"
+      description: "Percentage of CPU time spent running user processes."
+    - alias: "CPU System %"
+      command: "vmstat 1 2 | tail -1 | awk '{print $14}'"
+      unit: "%"
+      description: "Percentage of CPU time spent running kernel processes."
+    - alias: "CPU Idle %"
+      command: "vmstat 1 2 | tail -1 | awk '{print $15}'"
+      unit: "%"
+      description: "Percentage of CPU time spent idle."
+    - alias: "Memory Free"
+      command: "vmstat 1 2 | tail -1 | awk '{print $4}'"
+      unit: "KB"
+      description: "Amount of free memory in Kilobytes."
+
+performance_counters:
+  windows:
+    # --- System-Wide CPU Metrics ---
+    - path: "\\Processor Information(_Total)\\% Processor Time"
+      alias: "Total CPU Usage"
+      unit: "%"
+      description: "Overall percentage of time the CPU is busy. Sustained values over 80-90% may indicate a bottleneck."
+      threshold: 80
+
+    - path: "\\System\\Processor Queue Length"
+      alias: "CPU Queue Length"
+      unit: "Count"
+      description: "Number of threads waiting for CPU time. A value consistently higher than 2 per CPU core indicates a bottleneck."
+      threshold: 10
+
+    # --- System-Wide Memory Metrics ---
+    - path: "\\Memory\\Available MBytes"
+      alias: "Available Memory"
+      unit: "MB"
+      description: "Amount of physical memory available. Consistently low values indicate memory pressure."
+      threshold: 512 # Alert if available memory drops below 512 MB
+
+    - path: "\\Memory\\Pages/sec"
+      alias: "Memory Hard Faults"
+      unit: "Pages/sec"
+      description: "Rate of memory pages read/written to disk (swapping). High values indicate insufficient RAM."
+      threshold: 500
+
+    # --- System-Wide Disk I/O Metrics ---
+    - path: "\\LogicalDisk(*)\\% Free Space"
+      alias: "Disk Free Space"
+      unit: "%"
+      description: "Percentage of free space on the disk. Critical for capacity planning."
+      threshold: 15 # Alert if free space drops below 15%
+
+    - path: "\\LogicalDisk(*)\\Avg. Disk sec/Read"
+      alias: "Avg. Disk Read Latency"
+      unit: "sec"
+      description: "Average time of a disk read operation. Values consistently above 0.02s (20ms) can indicate a bottleneck."
+      threshold: 0.02
+
+    - path: "\\LogicalDisk(*)\\Avg. Disk sec/Write"
+      alias: "Avg. Disk Write Latency"
+      unit: "sec"
+      description: "Average time of a disk write operation. Values consistently above 0.02s (20ms) can indicate a bottleneck."
+      threshold: 0.02
+
+    - path: "\\LogicalDisk(*)\\Current Disk Queue Length"
+      alias: "Disk Queue Length"
+      unit: "Count"
+      description: "Number of I/O requests waiting for the disk. High values indicate the disk cannot keep up."
+      threshold: 2
+
+    # --- System-Wide Network I/O Metrics ---
+    - path: "\\Network Interface(*)\\Bytes Total/sec"
+      alias: "Total Network Traffic"
+      unit: "Bytes/sec"
+      description: "Total network throughput (bytes sent and received)."
+      threshold: null # Thresholds for network traffic are highly variable.
+
+    # --- Per-Process Metrics ---
+    - path: "\\Process(*)\\% Processor Time"
+      alias: "Process CPU Usage"
+      unit: "%"
+      description: "CPU usage for each individual process. Helps identify resource-hungry applications."
+      threshold: 50 # Flag any single process using over 50% CPU.
+
+    - path: "\\Process(*)\\Working Set"
+      alias: "Process Memory Usage"
+      unit: "Bytes"
+      description: "Memory usage for each individual process."
+      threshold: 1073741824 # Flag any single process using over 1GB of RAM.
+
+  linux:
+    - alias: "CPU User %"
+      command: "vmstat 1 2 | tail -1 | awk '{print $13}'"
+      unit: "%"
+      description: "Percentage of CPU time spent running user processes."
+    - alias: "CPU System %"
+      command: "vmstat 1 2 | tail -1 | awk '{print $14}'"
+      unit: "%"
+      description: "Percentage of CPU time spent running kernel processes."
+    - alias: "CPU Idle %"
+      command: "vmstat 1 2 | tail -1 | awk '{print $15}'"
+      unit: "%"
+      description: "Percentage of CPU time spent idle."
+    - alias: "Memory Free"
+      command: "vmstat 1 2 | tail -1 | awk '{print $4}'"
+      unit: "KB"
+      description: "Amount of free memory in Kilobytes."
+
+# --- NEW VSPHERE DISCOVERY CONFIGURATION ---
+vsphere:
+  # --- NEW: Set this to false to disable performance collection and avoid the error ---
+  collect_performance: true
+  collect_networks: true
+  collect_datastores: true
+  port: 443
+  disable_ssl_verification: true
+  max_vm_workers: 10
+  export_individual_vms: true
+  
+neo4j:
+  uri: "bolt://localhost:7687"
+  user: "neo4j"
+  password: "password123"

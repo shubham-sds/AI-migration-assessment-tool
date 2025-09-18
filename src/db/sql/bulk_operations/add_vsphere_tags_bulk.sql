@@ -1,0 +1,1 @@
+INSERT INTO vsphere_tags (vm_id, tag_name, category_name) VALUES (?,?,?);

@@ -1,0 +1,40 @@
+{
+    "vm_name": "gitlab-vm",
+    "host_name": "dl-380-02-hpc.anthos.local",
+    "cluster_name": "Application-Cluster",
+    "guest_os": "Red Hat Enterprise Linux 7 (64-bit)",
+    "power_state": "poweredOn",
+    "ip_address": "10.26.11.193",
+    "cpu_count": 1,
+    "memory_gb": 2.0,
+    "vmware_tools_status": "toolsOld",
+    "boot_type": "bios",
+    "secure_boot_enabled": false,
+    "hardware_version": "vmx-19",
+    "snapshots": [],
+    "virtual_disks": [
+        {
+            "disk_label": "Hard disk 1",
+            "capacity_gb": 100.0,
+            "provisioning_type": "Thin",
+            "storage_policy": "N/A",
+            "datastore_name": "vsanDatastore-app"
+        }
+    ],
+    "networks": [
+        {
+            "nic_label": "Network adapter 1",
+            "mac_address": "00:50:56:9b:56:f8",
+            "ip_address": "10.26.11.193",
+            "port_group": "N/A",
+            "switch_name": "N/A",
+            "vlan_id": 0,
+            "teaming_policy": "N/A"
+        }
+    ],
+    "tags": [],
+    "vapp_membership": null,
+    "storage_policy": "Datastore Default",
+    "vgpu_info": "[]",
+    "custom_attributes": "{}"
+}

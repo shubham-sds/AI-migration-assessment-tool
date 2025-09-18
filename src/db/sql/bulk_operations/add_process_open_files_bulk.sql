@@ -1,0 +1,1 @@
+INSERT INTO process_open_files (server_id, pid, file_path) VALUES (?,?,?);

@@ -1,0 +1,3 @@
+ip,os_type,user
+10.19.7.76,linux,ubuntu
+10.19.4.8,vsphere,read@vsphere.local

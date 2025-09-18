@@ -1,0 +1,40 @@
+{
+    "vm_name": "10.19.7.202-kath-worker",
+    "host_name": "dl-380-03.anthos.local",
+    "cluster_name": "Management-Cluster",
+    "guest_os": "Ubuntu Linux (64-bit)",
+    "power_state": "poweredOn",
+    "ip_address": "10.19.7.202",
+    "cpu_count": 8,
+    "memory_gb": 16.0,
+    "vmware_tools_status": "toolsOk",
+    "boot_type": "bios",
+    "secure_boot_enabled": false,
+    "hardware_version": "vmx-19",
+    "snapshots": [],
+    "virtual_disks": [
+        {
+            "disk_label": "Hard disk 1",
+            "capacity_gb": 100.0,
+            "provisioning_type": "Thin",
+            "storage_policy": "N/A",
+            "datastore_name": "vsanDatastore-mgmt"
+        }
+    ],
+    "networks": [
+        {
+            "nic_label": "Network adapter 1",
+            "mac_address": "00:50:56:9b:1f:a1",
+            "ip_address": "10.19.7.202",
+            "port_group": "N/A",
+            "switch_name": "N/A",
+            "vlan_id": 0,
+            "teaming_policy": "N/A"
+        }
+    ],
+    "tags": [],
+    "vapp_membership": null,
+    "storage_policy": "Datastore Default",
+    "vgpu_info": "[]",
+    "custom_attributes": "{}"
+}

@@ -1,0 +1,1 @@
+INSERT INTO guest_environment_variables (server_id, variable_name, variable_value) VALUES (?,?,?);

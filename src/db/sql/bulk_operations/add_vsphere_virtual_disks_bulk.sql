@@ -1,0 +1,1 @@
+INSERT INTO vsphere_virtual_disks (vm_id, disk_label, capacity_gb, provisioning_type, storage_policy, datastore_name) VALUES (?,?,?,?,?,?);

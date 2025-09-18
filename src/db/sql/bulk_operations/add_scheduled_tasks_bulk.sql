@@ -1,0 +1,1 @@
+INSERT INTO scheduled_tasks (server_id, name, command, schedule, enabled) VALUES (?,?,?,?,?);

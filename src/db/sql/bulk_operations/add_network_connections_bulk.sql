@@ -1,0 +1,1 @@
+INSERT INTO network_connections (server_id, protocol, state, local_address, local_port, peer_address, peer_port, process_name, pid) VALUES (?,?,?,?,?,?,?,?,?);

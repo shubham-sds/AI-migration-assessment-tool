@@ -1,0 +1,40 @@
+{
+    "vm_name": "gmseng02-ipa-01",
+    "host_name": "dl-380-02-hpc.anthos.local",
+    "cluster_name": "Application-Cluster",
+    "guest_os": "Red Hat Enterprise Linux 9 (64-bit)",
+    "power_state": "poweredOn",
+    "ip_address": "10.26.7.1",
+    "cpu_count": 4,
+    "memory_gb": 8.0,
+    "vmware_tools_status": "toolsOld",
+    "boot_type": "efi",
+    "secure_boot_enabled": false,
+    "hardware_version": "vmx-19",
+    "snapshots": [],
+    "virtual_disks": [
+        {
+            "disk_label": "Hard disk 1",
+            "capacity_gb": 100.0,
+            "provisioning_type": "Thin",
+            "storage_policy": "N/A",
+            "datastore_name": "vsanDatastore-app"
+        }
+    ],
+    "networks": [
+        {
+            "nic_label": "Network adapter 1",
+            "mac_address": "00:50:56:9b:3f:3e",
+            "ip_address": "10.26.7.1",
+            "port_group": "N/A",
+            "switch_name": "N/A",
+            "vlan_id": 0,
+            "teaming_policy": "N/A"
+        }
+    ],
+    "tags": [],
+    "vapp_membership": null,
+    "storage_policy": "Datastore Default",
+    "vgpu_info": "[]",
+    "custom_attributes": "{}"
+}

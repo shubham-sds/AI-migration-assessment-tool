@@ -1,0 +1,1 @@
+SELECT id, vm_name FROM vsphere_vms WHERE vcenter_ip =?;

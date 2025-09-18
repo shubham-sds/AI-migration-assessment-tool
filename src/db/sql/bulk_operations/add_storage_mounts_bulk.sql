@@ -1,0 +1,1 @@
+INSERT INTO storage_mounts (server_id, source, mount_point, filesystem_type, storage_type, total_gb, used_gb) VALUES (?,?,?,?,?,?,?);

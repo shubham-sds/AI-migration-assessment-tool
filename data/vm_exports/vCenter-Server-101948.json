@@ -1,0 +1,152 @@
+{
+    "vm_name": "vCenter-Server-10.19.4.8",
+    "host_name": "dl-360-02.anthos.local",
+    "cluster_name": "Management-Cluster",
+    "guest_os": "Other 3.x or later Linux (64-bit)",
+    "power_state": "poweredOn",
+    "ip_address": "10.19.4.8",
+    "cpu_count": 16,
+    "memory_gb": 32.0,
+    "vmware_tools_status": "toolsOk",
+    "boot_type": "bios",
+    "secure_boot_enabled": false,
+    "hardware_version": "vmx-10",
+    "snapshots": [],
+    "virtual_disks": [
+        {
+            "disk_label": "Hard disk 1",
+            "capacity_gb": 48.56,
+            "provisioning_type": "Thin",
+            "storage_policy": "N/A",
+            "datastore_name": "datastore1 (5)"
+        },
+        {
+            "disk_label": "Hard disk 2",
+            "capacity_gb": 6.37,
+            "provisioning_type": "Thin",
+            "storage_policy": "N/A",
+            "datastore_name": "datastore1 (5)"
+        },
+        {
+            "disk_label": "Hard disk 3",
+            "capacity_gb": 25.0,
+            "provisioning_type": "Thin",
+            "storage_policy": "N/A",
+            "datastore_name": "datastore1 (5)"
+        },
+        {
+            "disk_label": "Hard disk 4",
+            "capacity_gb": 25.0,
+            "provisioning_type": "Thin",
+            "storage_policy": "N/A",
+            "datastore_name": "datastore1 (5)"
+        },
+        {
+            "disk_label": "Hard disk 5",
+            "capacity_gb": 10.0,
+            "provisioning_type": "Thin",
+            "storage_policy": "N/A",
+            "datastore_name": "datastore1 (5)"
+        },
+        {
+            "disk_label": "Hard disk 6",
+            "capacity_gb": 10.0,
+            "provisioning_type": "Thin",
+            "storage_policy": "N/A",
+            "datastore_name": "datastore1 (5)"
+        },
+        {
+            "disk_label": "Hard disk 7",
+            "capacity_gb": 15.0,
+            "provisioning_type": "Thin",
+            "storage_policy": "N/A",
+            "datastore_name": "datastore1 (5)"
+        },
+        {
+            "disk_label": "Hard disk 8",
+            "capacity_gb": 10.0,
+            "provisioning_type": "Thin",
+            "storage_policy": "N/A",
+            "datastore_name": "datastore1 (5)"
+        },
+        {
+            "disk_label": "Hard disk 9",
+            "capacity_gb": 1.0,
+            "provisioning_type": "Thin",
+            "storage_policy": "N/A",
+            "datastore_name": "datastore1 (5)"
+        },
+        {
+            "disk_label": "Hard disk 10",
+            "capacity_gb": 10.0,
+            "provisioning_type": "Thin",
+            "storage_policy": "N/A",
+            "datastore_name": "datastore1 (5)"
+        },
+        {
+            "disk_label": "Hard disk 11",
+            "capacity_gb": 10.0,
+            "provisioning_type": "Thin",
+            "storage_policy": "N/A",
+            "datastore_name": "datastore1 (5)"
+        },
+        {
+            "disk_label": "Hard disk 12",
+            "capacity_gb": 100.0,
+            "provisioning_type": "Thin",
+            "storage_policy": "N/A",
+            "datastore_name": "datastore1 (5)"
+        },
+        {
+            "disk_label": "Hard disk 13",
+            "capacity_gb": 50.0,
+            "provisioning_type": "Thin",
+            "storage_policy": "N/A",
+            "datastore_name": "datastore1 (5)"
+        },
+        {
+            "disk_label": "Hard disk 14",
+            "capacity_gb": 10.0,
+            "provisioning_type": "Thin",
+            "storage_policy": "N/A",
+            "datastore_name": "datastore1 (5)"
+        },
+        {
+            "disk_label": "Hard disk 15",
+            "capacity_gb": 5.0,
+            "provisioning_type": "Thin",
+            "storage_policy": "N/A",
+            "datastore_name": "datastore1 (5)"
+        },
+        {
+            "disk_label": "Hard disk 16",
+            "capacity_gb": 100.0,
+            "provisioning_type": "Thin",
+            "storage_policy": "N/A",
+            "datastore_name": "datastore1 (5)"
+        },
+        {
+            "disk_label": "Hard disk 17",
+            "capacity_gb": 150.0,
+            "provisioning_type": "Thin",
+            "storage_policy": "N/A",
+            "datastore_name": "datastore1 (5)"
+        }
+    ],
+    "networks": [
+        {
+            "nic_label": "Network adapter 1",
+            "mac_address": "00:0c:29:c2:74:95",
+            "ip_address": "10.19.4.8",
+            "port_group": "N/A",
+            "switch_name": "N/A",
+            "vlan_id": 0,
+            "teaming_policy": "N/A"
+        }
+    ],
+    "tags": [],
+    "vapp_membership": null,
+    "storage_policy": "Datastore Default",
+    "vgpu_info": "[]",
+    "custom_attributes": "{}"
+}

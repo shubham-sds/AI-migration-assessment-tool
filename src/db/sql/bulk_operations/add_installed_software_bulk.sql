@@ -1,0 +1,1 @@
+INSERT INTO installed_software (server_id, name, version, vendor) VALUES (?,?,?,?);

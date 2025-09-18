@@ -1,0 +1,1 @@
+INSERT INTO vsphere_snapshots (vm_id, snapshot_name, description, created_at, size_gb) VALUES (?,?,?,?,?);

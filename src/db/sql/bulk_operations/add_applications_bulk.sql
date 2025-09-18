@@ -1,0 +1,1 @@
+INSERT INTO applications (server_id, process_name, pid, user, state, command_line, listening_ports, owning_package) VALUES (?,?,?,?,?,?,?,?);

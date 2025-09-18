@@ -1,0 +1,1 @@
+INSERT INTO vsphere_cluster_rules (cluster_id, rule_name, enabled, type) VALUES (?,?,?,?);

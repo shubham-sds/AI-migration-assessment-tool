@@ -1,0 +1,1 @@
+SELECT id, cluster_name FROM vsphere_clusters WHERE vcenter_ip =?;

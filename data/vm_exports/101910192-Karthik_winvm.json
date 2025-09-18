@@ -1,0 +1,40 @@
+{
+    "vm_name": "10.19.10.192-Karthik_winvm",
+    "host_name": "dl-360-01.anthos.local",
+    "cluster_name": "Management-Cluster",
+    "guest_os": "Microsoft Windows Server 2022 (64-bit)",
+    "power_state": "poweredOn",
+    "ip_address": null,
+    "cpu_count": 2,
+    "memory_gb": 4.0,
+    "vmware_tools_status": "toolsNotInstalled",
+    "boot_type": "efi",
+    "secure_boot_enabled": false,
+    "hardware_version": "vmx-19",
+    "snapshots": [],
+    "virtual_disks": [
+        {
+            "disk_label": "Hard disk 1",
+            "capacity_gb": 90.0,
+            "provisioning_type": "Thick",
+            "storage_policy": "N/A",
+            "datastore_name": "datastore1"
+        }
+    ],
+    "networks": [
+        {
+            "nic_label": "Network adapter 1",
+            "mac_address": "00:50:56:9b:c5:68",
+            "ip_address": null,
+            "port_group": "N/A",
+            "switch_name": "N/A",
+            "vlan_id": 0,
+            "teaming_policy": "N/A"
+        }
+    ],
+    "tags": [],
+    "vapp_membership": null,
+    "storage_policy": "Datastore Default",
+    "vgpu_info": "[]",
+    "custom_attributes": "{}"
+}
