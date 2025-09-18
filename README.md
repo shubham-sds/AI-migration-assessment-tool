@@ -1,9 +1,31 @@
-# ai-migration-assessment-tool-v2
+<div align="center">
 AI-Powered Migration Assessment Tool
+
+</div>
+
+<div align="center">
+
+</div>
 
 The AI-Powered Migration Assessment Tool is a command-line application designed to create a "Digital Twin" of an IT infrastructure. It performs deep discovery of virtual and physical servers, stores the collected data in a structured database, and provides a foundation for intelligent analysis and migration planning.
 
 The tool is built to be resilient, secure, and extensible, featuring a robust, resumable workflow that can recover from interruptions and track the full history of each discovery run.
+Table of Contents
+
+    Key Features
+
+    Project Flow
+
+    Prerequisites
+
+    Setup Instructions
+
+    Configuration
+
+    Usage
+
+    Project File Structure
+
 Key Features
 
     Modular Discovery Agents: Pluggable agents for different environments (VMware vSphere, Linux, Windows).
@@ -85,15 +107,15 @@ Setup Instructions
     pip install -r requirements.txt
 
 Configuration
+1. inventory.csv
 
-    inventory.csv:
-    Populate this file with the servers you want to discover. The following columns are required:
+Populate this file with the servers you want to discover. The following columns are required:
 
-        hostname: The IP address or FQDN of the target.
+    hostname: The IP address or FQDN of the target.
 
-        os_type: The agent to use (e.g., vsphere, linux, windows).
+    os_type: The agent to use (e.g., vsphere, linux, windows).
 
-        user: The username required to connect to the host.
+    user: The username required to connect to the host.
 
     Example:
 
@@ -101,8 +123,9 @@ Configuration
     10.10.1.5,vsphere,read_only@vsphere.local
     webapp01.prod.local,linux,ssh_user
 
-    knowledge_base.yaml:
-    This file drives the discovery process. Ensure the tasks_per_os section is defined with the tasks you want to run for each os_type. The task names must match the method names in the corresponding discovery agent.
+2. knowledge_base.yaml
+
+This file drives the discovery process. Ensure the tasks_per_os section is defined with the tasks you want to run for each os_type. The task names must match the method names in the corresponding discovery agent.
 
     Example tasks_per_os section:
 
